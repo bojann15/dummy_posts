@@ -1,0 +1,32 @@
+.create_post{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.create_post form{
+    max-width: 500px;
+    min-width: 290px;
+    width: 100%;
+    margin: 15px 30px;
+}
+.create_post form .row{
+    width: 100%;
+    margin: 15px 0;
+}
+.create_post form input{
+    width: 100%;
+    min-height: 40px;
+    padding: 0 5px;
+}
+.create_post form button{
+    width: 200px;
+    height: 40px;
+    background: #555;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+}

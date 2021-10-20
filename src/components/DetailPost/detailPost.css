@@ -1,0 +1,92 @@
+.detail{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 50px;
+    font-size: 150%;
+}
+.detail img{
+    max-width: 400px;
+    width: 100%;
+    margin: 20px;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+}
+.box-detail{
+    max-width: 500px;
+    width: 100%;
+    margin: 5 20px;
+}
+.box-detail .row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.box-detail h3{
+    text-transform: uppercase;
+    color: rgb(182, 180, 93);
+    letter-spacing: 2px;
+    font-weight: 2px;
+    margin-bottom: 10px;
+}
+.box-detail p{
+    line-height: 1.5;
+    margin: 10px 0;
+    opacity: 0.8;
+}
+.detail .tags{
+    font-weight: bold;
+    position: relative;
+    left: 9px;
+    margin-bottom: 10px;
+    font-size: 100%;
+}
+#btn_view{
+    background: teal ;
+    margin-left: 5px;
+    width: 50%;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 6px;
+}
+#comments{
+    position: absolute;
+    top: 600px;
+    left: 920px;
+    display: grid;
+    line-height: 1.5;
+    margin: 10px 0;
+    opacity: 0.8;
+}
+
+.detail form{
+    max-width: 480px;
+    min-width: 290px;
+    width: 100%;
+    margin: 40px 30px;
+    position: relative;
+    left: -450px;
+}
+.detail form .row{
+    width: 100%;
+    margin: 15px 0;
+}
+.detail form textarea{
+    width: 81%;
+    min-height: 40px;
+    padding: 0 5px;
+}
+.detail form button{
+    width: 200px;
+    height: 40px;
+    background: #555;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
