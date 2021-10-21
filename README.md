@@ -1,6 +1,6 @@
 # dummy_posts
 An application used to list all posts, create new post and show detail post when click on post. On detail page can add comments and list all comments, edit post.  
-Built with React. For state management used Context.
+Built with React. For state management used Context. Deployed on netlify. https://dummy-posts.netlify.app/
 
 ## Technologies
 
