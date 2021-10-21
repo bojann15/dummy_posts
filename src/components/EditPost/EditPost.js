@@ -7,14 +7,16 @@ const EditPost = () => {
     const history = useHistory();
     const { id } = useParams();
     const { posts, setShouldUpdate } = useContext(GlobalContext);
-    const [post, setPost] = useState({ image: '', publishDate: new Date().toJSON(), likes: 0, tags: [], text: "", id: '' })
+    const [post, setPost] = useState({ image: '', likes: 0, tags: [], text: "" });
 
     useEffect(() => {
         posts.forEach((post) => { if (post.id === id) { setPost(post) } })
-    }, [id, posts])
+    }, [id, posts]);
+
     const clear = () => {
-        setPost({ image: '', publishDate: new Date().toDateString(), likes: 0, tags: [], text: "", id: '' });
+        setPost({ image: '', likes: 0, tags: [], text: "" });
     };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
@@ -26,6 +28,7 @@ const EditPost = () => {
             console.error(err.response.data);
         }
     };
+
     return (
         <div className="create_post">
             <form onSubmit={handleSubmit}>

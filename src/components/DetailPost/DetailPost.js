@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useParams, useHistory } from 'react-router-dom';
 import API from '../../api';
+
 const DetailPost = () => {
     const { id } = useParams();
     const history = useHistory();
@@ -8,16 +9,17 @@ const DetailPost = () => {
     const [comments, setComments] = useState([]);
     const [comment, setComment] = useState({ message: "" });
     const [update, setUpdate] = useState(false);
+
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const response = await API.get(`/post/${id}`);
                 setDetailPost(response.data);
-
             } catch (err) {
                 console.error(err.response.data);
             }
         };
+
         const getComments = async () => {
             try {
                 const response = await API.get(`/post/${id}/comment`);
@@ -29,20 +31,22 @@ const DetailPost = () => {
         fetchData();
         getComments();
     }, [id, update]);
+
     const handleEdit = (id) => {
         history.push(`/${id}/edit`)
-    }
+    };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
             await API.post("/comment/create", { ...comment, owner: detailPost.owner.id, post: detailPost.id });
             setComment({ message: "" });
             setUpdate(true);
-
         } catch (err) {
             console.error(err.response.data);
         }
     };
+
     return (
         <div className="detail">
             <img src={detailPost.image} alt="" />

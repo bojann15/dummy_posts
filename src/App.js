@@ -1,12 +1,14 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 import DetailPost from './components/DetailPost/DetailPost';
 import Posts from './components/Posts/Posts';
 import { GlobalContextProvider } from './context/globalState';
 import CreatePost from './components/CreatePost/CreatePost';
 import EditPost from './components/EditPost/EditPost';
 import Header from './components/Headers/Header';
+
 const App = () => {
+
   return (
     <GlobalContextProvider>
       <Router>
@@ -22,6 +24,6 @@ const App = () => {
       </Router>
     </GlobalContextProvider>
   );
-}
+};
 
 export default App;

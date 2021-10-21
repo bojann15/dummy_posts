@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react';
 import { GlobalContext } from '../../context/globalState';
 import API from '../../api';
 import { useHistory } from 'react-router-dom';
+
 const CreatePost = () => {
     const history = useHistory();
     const { setShouldUpdate } = useContext(GlobalContext);
@@ -9,6 +10,7 @@ const CreatePost = () => {
     const clear = () => {
         setPost({ text: "", image: "", likes: 0, tags: [], owner: "" });
     };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {

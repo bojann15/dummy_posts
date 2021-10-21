@@ -1,10 +1,13 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom';
+
 const Post = ({ post }) => {
     const history = useHistory();
+
     const handlePostSelect = (id) => {
         history.push(`/${id}`)
     };
+
     return (
         <div className="post" onClick={() => handlePostSelect(post.id)} >
             <img src={post.image} alt="" />

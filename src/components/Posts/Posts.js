@@ -5,6 +5,7 @@ import Post from './Post/Post';
 
 const Posts = () => {
     const { posts, setPosts, shouldUpdate, setShouldUpdate } = useContext(GlobalContext);
+
     useEffect(() => {
         if (!shouldUpdate) return;
         const fetchData = async () => {
@@ -17,7 +18,8 @@ const Posts = () => {
             }
         };
         fetchData();
-    }, [shouldUpdate])
+    }, [shouldUpdate]);
+
     return (
         <div className="posts">
             {posts.map((post) => {
@@ -28,4 +30,5 @@ const Posts = () => {
         </div>
     )
 };
+
 export default Posts;
